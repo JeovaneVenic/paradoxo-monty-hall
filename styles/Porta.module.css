@@ -1,0 +1,73 @@
+.area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--area-porta-largura);
+    height: var(--area-porta-altura);
+    margin: 5px;
+}
+
+.grade {
+    display: flex;
+    flex-direction: column-reverse;
+    /* aqui eu quero que a estrura creça e ocupe area inteira*/
+    flex-grow: 1;
+    border-left: 5px solid #2c36c0;
+    border-top: 5px solid #2c36c0;
+    border-right: 5px solid #2c36c0;
+
+    /* adicionei uma cor ao fundo da porta quando clicar na nacaneta˜ */
+    background-color: #0005;
+    width: 90%;
+}
+
+.porta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.623);
+    padding: 15px;
+    /* aqui eu quero que a estrura creça e ocupe area inteira*/
+    flex-grow: 1;
+}
+
+.numero {
+    font-size: 3rem;
+    color: #2c36c0;
+}
+
+.piso {
+    height: 10px;
+    width: 100%;
+    background-color: #ddd;
+}
+
+.marcaneta {
+    position: absolute;
+
+    /* criou um ajuste dentro do objeto pai */
+    align-self: flex-start;
+    /* uso uma funcao para calcular (45 graus) onde quero posicionar o objeto
+       independente se o objeto pai crescer ou nao.
+    */
+    top: calc(0.45 * var(--area-porta-altura));
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: #2c36c0;
+}
+
+.porta_selecionada {
+    border-left: 5px solid yellow;
+    border-top: 5px solid yellow;
+    border-right: 5px solid yellow;
+}
+
+.porta_selecionada .numero{
+    color: yellow;
+}
+
+.porta_selecionada .marcaneta{
+    background-color: yellow;
+}

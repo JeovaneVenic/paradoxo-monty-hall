@@ -1,0 +1,72 @@
+#jogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.titulo {
+    position: absolute;
+    top: 20px; /* Ajuste o valor conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.tentativas {
+    position: absolute;
+    top: 80px; /* Ajuste o valor para aumentar a distância das portas */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.portas {
+    display: flex;
+    align-self: stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.botoes button {
+    background-color:  #0000ff;
+    color: #fff;
+    font-size: 2rem;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px; /* Adiciona bordas arredondadas */
+}
+
+/* Estilos para o modal */
+.modalOverlay {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modalContent {
+    background-color: #0000ff; /* Fundo azul */
+    color: white; /* Texto branco */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.closeButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color:  #0000ff;
+    border: none;
+}
